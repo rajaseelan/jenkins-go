@@ -5,7 +5,7 @@ node {
     }
     stage('Build') {
         echo "Building Go App"
-        sh 'go build main.go -o main'
+        sh 'go build -o main -a main.go'
     }
 
     stage('Run App') {
