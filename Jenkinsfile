@@ -9,6 +9,17 @@ node {
         sh 'go build -o main -a main.go'
     }
 
+    stage('Gonna Fail') {
+        try {
+            echo 'THis will fail'
+            sh 'go not-a-command'
+        } catch(ex) {
+            echo 'Something Went wrong'
+        } finally {
+            echo "In Finally, everything's gonna be ok"
+        }
+    }
+
     stage('Run App') {
         echo 'Running app...'
         sh './main'
