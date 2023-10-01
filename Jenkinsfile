@@ -15,6 +15,8 @@ node {
             sh 'go not-a-command'
         } catch(ex) {
             echo 'Something Went wrong'
+            echo ex.toStrin()
+            //currentBuild.result = 'FAILURE'
         } finally {
             echo "In Finally, everything's gonna be ok"
         }
