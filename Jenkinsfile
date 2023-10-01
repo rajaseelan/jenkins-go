@@ -7,7 +7,7 @@ node {
         echo "Building Go App"
         sh 'go version'
         sh 'go build -o main -a main.go'
-        releasenotes();
+        releasenotes(changes: "false");
     }
 
     stage('Gonna Fail') {
