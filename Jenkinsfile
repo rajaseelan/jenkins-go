@@ -10,18 +10,18 @@ node {
         releasenotes(changes: "false");
     }
 
-    stage('Gonna Fail') {
-        try {
-            echo 'THis will fail'
-            sh 'go not-a-command'
-        } catch(ex) {
-            echo 'Something Went wrong'
-            echo ex.toString()
-            //currentBuild.result = 'FAILURE'
-        } finally {
-            echo "In Finally, everything's gonna be ok"
-        }
-    }
+    // stage('Gonna Fail') {
+    //     try {
+    //         echo 'THis will fail'
+    //         sh 'go not-a-command'
+    //     } catch(ex) {
+    //         echo 'Something Went wrong'
+    //         echo ex.toString()
+    //         //currentBuild.result = 'FAILURE'
+    //     } finally {
+    //         echo "In Finally, everything's gonna be ok"
+    //     }
+    // }
 
     stage('Run App') {
         echo 'Running app...'
