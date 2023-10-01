@@ -10,7 +10,7 @@ node {
 
     stage('Run App') {
         echo 'Running app...'
-        sh ''./main'
+        sh './main'
     }
 
     stage('Delete artifact') {
